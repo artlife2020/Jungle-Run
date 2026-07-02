@@ -32,4 +32,21 @@ int main() {
         } else if (event == 1) {
             std::cout << "Dense plants slow you down.\n";
             distance += 6;
-            stamina--
+            stamina--;
+        } else {
+            std::cout << "Fresh water restores your strength.\n";
+            distance += 8;
+            stamina++;
+        }
+
+        std::cout << "Distance: " << distance << "\n";
+        std::cout << "Stamina: " << stamina << "\n";
+    }
+
+    if (distance >= 50)
+        std::cout << "\nYou escaped the jungle!\n";
+    else
+        std::cout << "\nYour adventure has ended.\n";
+
+    return 0;
+}
